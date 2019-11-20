@@ -157,6 +157,7 @@ const damien = {};
 console.log(Object.isExtensible(damien));
 //Should be true
 */
+
 //Object.isFrozen - also checks the previous one.
 /*
 const bree = {};
