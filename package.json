@@ -1,0 +1,21 @@
+{
+  "name": "training",
+  "version": "1.0.0",
+  "description": "- Example code",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "easycommit": "git add . && git commit -m 'intermediate' && git push origin master"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/breegrizzell/myfirstrepoi.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/breegrizzell/myfirstrepoi/issues"
+  },
+  "homepage": "https://github.com/breegrizzell/myfirstrepoi#readme"
+}
