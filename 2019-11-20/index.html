@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="application/javascript">
+        document.addEventListener("readystatechange", function(){
+            console.log(document.readyState); //loading, interactive -> Parsed the DOM, still loading the async parts <img>,
+            //complete (Done with async parts)
+            if(document.readyState === 'interactive'){
+                // TODO run stuff here:
+                getData();
+            }
+        });
+
+        function getData(){
+            const promise = fetch('https://api.github.com/users/breegrizzell/repos');
+            promise.then(function(response){
+                //TODO deal with response
+                console.log(promise);
+            }, function(err){
+                //TODO deal with error
+                console.log(err);
+            })
+        }
+    </script>
+</head>
+</html>
