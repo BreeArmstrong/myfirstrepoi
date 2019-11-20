@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Getting Random Cats</title>
+    <script type="application/javascript">
+    //Find an open API fetch it and show it on screen
+
+    function getCat() {
+        const promise = fetch('https://random.dog/9f6434c2-a6a7-9660-19f0e2981644.jpeg');
+        promise.then(function(response) {
+            console.log(promise);
+        },function (err){
+            console.log(err)
+        })
+
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
