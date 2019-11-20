@@ -2,19 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Getting Random Cats</title>
+    <title>Getting Random Dog</title>
     <script type="application/javascript">
     //Find an open API fetch it and show it on screen
 
-    function getCat() {
-        const promise = fetch('https://random.dog/9f6434c2-a6a7-9660-19f0e2981644.jpeg');
+        //Bad way to do it, just wanting to get started while waiting for the training github link
+    function getDog() {
+        const promise = fetch('https://random.dog/',{
+            credentials: 'same-origin'
+        });
         promise.then(function(response) {
             console.log(promise);
         },function (err){
             console.log(err)
         })
-
         }
+        getDog();
     </script>
 </head>
 <body>
