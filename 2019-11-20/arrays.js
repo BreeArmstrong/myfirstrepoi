@@ -60,10 +60,33 @@ console.log(testArr.every(isUnderFive));//returns true
  */
 
 //Array.fill:
+/*
+const example = [1,2,3,4];
+console.log(example.fill(9)); //fills the array with all 9s.
+
+//NOTE:
+//Doesn't work with an empty array because there aren't any values to fill.
+const example2 = [];
+console.log(example2.fill(8));
+ */
 
 //Array.filter:
+/*
+const names = ['Brianna', 'Aakash', 'Damien', 'Gabby', 'Elle'];
+
+//Checks to see which names are longer than 3 (should be all)
+console.log(names.filter(name => name.length > 3));
+//Which names are longer than 5
+console.log(names.filter(name => name.length > 5));
+//Longer than 6
+console.log(names.filter(name => name.length > 6));
+ */
 
 //Array.find:
+
+//Returns first element found (that satisfies testing:
+
+const arr = [];
 
 //Array.findIndex:
 
