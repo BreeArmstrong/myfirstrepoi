@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Test</title>
-    <script type="application/javascript" src="openapi.js"></script>
-    <script type="application/javascript" src="renderapi.js"></script>
+    <meta charset="UTF-8">
+    <title>Code Quotes</title>
+    <script type="application/javascript" src="open-api.js"></script>
+    <script type="application/javascript" src="render-api.js"></script>
     <script type="application/javascript">
         //Find an open API fetch it and show it on screen
         document.addEventListener('readystatechange', function(){
             if(document.readyState === 'interactive'){
-                getCatFacts().then(data => {
+                getQuote().then(data => {
                     console.log(data);
+                    // console.log(data.en);
                     const container = document.querySelector('.container');
                     render(data, container);
                 }).catch(ex => {
