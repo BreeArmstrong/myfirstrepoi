@@ -9,6 +9,10 @@
             if(document.readyState === 'interactive'){
                 getUserData().then(data => {
                     console.log(data);
+                    const container = document.querySelector('.container');
+                    render([data], container);
+                }).catch(ex =>{
+                    console.log('Exception', ex)
                 });
             }
         })
