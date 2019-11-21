@@ -7,9 +7,14 @@
     <script type="application/javascript">
         document.addEventListener('readystatechange', function(){
             if(document.readyState === 'interactive'){
-
+                getUserData().then(data => {
+                    console.log(data);
+                });
             }
         })
     </script>
 </head>
+<body>
+    <div class="container"></div>
+</body>
 </html>
