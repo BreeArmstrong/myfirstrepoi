@@ -3,7 +3,7 @@ function render(data,container){
     //Step 2: Check if the data is an array and if it has a length
     if(Array.isArray(data) && data.length){
         //Now we iterate through the array
-        data.forEach((user, index) => createNewElement({tag:'div', innerHTML:Object.entries(user), parent:container, className:'user', customAttributeValue:index}))
+        data.forEach((user, index) => createNewElement({tag:'div', innerHTML:user.login, parent:container, className:'user', customAttributeValue:index}))
     }
 
     function createNewElement({tag, innerHTML,parent, className, customAttributeValue}){
