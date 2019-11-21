@@ -4,3 +4,7 @@ async function getUserData(){
     const data = await response.json();
     return data;
 }
+// const user = document.getElementById('.user');
+// user.document.addEventListener("mouseover", function(event) {
+//     event.target.backgroundColor = "red";
+// });
