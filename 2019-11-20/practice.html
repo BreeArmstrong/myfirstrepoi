@@ -3,21 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Getting Random Dog</title>
+    <script type="application/javascript" src="practice-api.js"></script>
     <script type="application/javascript">
     //Find an open API fetch it and show it on screen
-
-        //Bad way to do it, just wanting to get started while waiting for the training github link
-    function getDog() {
-        const promise = fetch('https://random.dog/',{
-            credentials: 'same-origin'
-        });
-        promise.then(function(response) {
-            console.log(promise);
-        },function (err){
-            console.log(err)
+        document.addEventListener('readystatechange', function(){
+            if(document.readyState === 'interactive'){
+                getRepos().then(data => {
+                    console.log(data); //This returns an array of 2 in the console since I have only 2 repositories public
+                    //TODO Create the html side to show on webpage
+                })
+            }
         })
-        }
-        getDog();
     </script>
 </head>
 <body>
