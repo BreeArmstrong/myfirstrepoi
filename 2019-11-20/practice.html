@@ -2,21 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Getting Random Dog</title>
+    <title>Getting User Repository</title>
     <script type="application/javascript" src="practice-api.js"></script>
+    <script type="application/javascript" src="practice-render.js"></script>
     <script type="application/javascript">
     //Find an open API fetch it and show it on screen
         document.addEventListener('readystatechange', function(){
             if(document.readyState === 'interactive'){
                 getRepos().then(data => {
                     console.log(data); //This returns an array of 2 in the console since I have only 2 repositories public
-                    //TODO Create the html side to show on webpage
-                })
+                    const container = document.querySelector('.container');
+                    render(data, container);
+                }).catch(ex => {
+                    console.log('Exception', ex)
+                });
             }
-        })
+        });
     </script>
 </head>
 <body>
-
+    <div class="container"></div>
 </body>
 </html>
