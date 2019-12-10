@@ -1,14 +1,13 @@
 function render(data, container){
     container.innerHTML = '';
     if(Array.isArray(data) && data.length){
-        data.forEach((pic, index) => createNewElement({tag:'div', innerHTML:pic.url, parent:container, className:'pic', customAttributeValue:index}));
+        data.forEach((pic, index) => createNewElement({tag:'img', src:pic.download_url, parent:container, className:'pic', customAttributeValue:index}));
     }
 }
-function createNewElement({tag, innerHTML, parent, className, customAttributeValue}){
+function createNewElement({tag, src, parent, className, customAttributeValue}){
     const picElement = document.createElement(tag);
-    picElement.innerHTML = innerHTML;
     picElement.classList.add(className);
-    picElement.setAttribute('data-index', customAttributeValue);
+    picElement.setAttribute('src', src);
     parent.appendChild(picElement);
 
 }

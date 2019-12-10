@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+  flex-direction: row; //Default is row, though it can also be calumn, reverse, etc.
+  flex-wrap: nowrap; //defaults is no wrap, can also have wrap and wrap reverse
+  flex-flow: row;
+  justify-content: center;
+  align-items: stretch;
+  align-content: stretch;
+}
+
+.item {
+  order: 0; //Order number you want the item in.
+  flex-grow: 2; //determines what the remaining space is taken up by
+  flex-shrink: 0; //Ability for a flex item to shrink if needed.
+  flex-basis: auto;
+  flex: none;
+  align-self: auto;
+}

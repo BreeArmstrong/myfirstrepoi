@@ -86,7 +86,7 @@ console.log(names.filter(name => name.length > 6));
 
 //Returns first element found (that satisfies testing:
 
-const arr = [];
+const arr = [5, 20, 7, 130, 44];
 
 //Array.findIndex:
 
