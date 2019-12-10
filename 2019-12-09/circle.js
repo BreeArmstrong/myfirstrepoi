@@ -41,10 +41,12 @@ document.addEventListener('readystatechange', () => {
       /*if (!event.ctrlKey) {
         return;
       }*/
+      isDown = false;
       console.log(event);
       const {x, y} = event;
       circle.setAttribute('style', `left: ${x - clientWidth / 2}px; top: ${y - clientHeight / 2}px;`);
       console.log(`The mouse is at ... `, x, y);
+      console.log(isDown);
       // return {x,y};
     });
     
@@ -57,12 +59,14 @@ document.addEventListener('readystatechange', () => {
         const {x1, y1} = event;
         console.log('mousedown is active...');
         console.log(`The mouse is at ... `, x1, y1);
+        console.log(isDown);
         
-        
-        document.body.addEventListener('mousemove', (event) => {
-          console.log('Tracking the cursor across the screen...')
-          
-        })
+        if(isDown === true) {
+          document.body.addEventListener('mousemove', (event) => {
+            console.log('Tracking the cursor across the screen...');
+            console.log(isDown);
+          })
+        }
       });
       
       // if(isDown === true) {
