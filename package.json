@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/breegrizzell/myfirstrepoi/issues"
   },
-  "homepage": "https://github.com/breegrizzell/myfirstrepoi#readme"
+  "homepage": "https://github.com/breegrizzell/myfirstrepoi#readme",
+  "devDependencies": {
+    "jest": "^24.9.0"
+  }
 }
