@@ -4,5 +4,5 @@
 
 ## Prototypal Inheritance
 
-## Context and this keyword 
+## Context and this keyword
  
