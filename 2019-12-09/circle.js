@@ -16,7 +16,6 @@ const createCircle = () => {
   parentNode.insertBefore(circle, refNode);
   return circle;
 };
-
 const createElement = props => {
   const {className, elemType, handlers, attributes = []} = props;
   const element = document.createElement(elemType);
@@ -26,8 +25,10 @@ const createElement = props => {
   });
   return element;
 };
+
 document.addEventListener('readystatechange', () => {
   if (document.readyState === 'interactive') {
+
   
     const circle = createCircle();
     const {clientHeight, clientWidth} = circle;
@@ -73,5 +74,32 @@ document.addEventListener('readystatechange', () => {
       
       // }
     
+    const divElement = createCircle();
+    let isMouseDown = false,
+      height = divElement.clientHeight,
+      width = divElement.clientWidth;
+    document.body.addEventListener('mouseup', () => {
+      isMouseDown = false
+    });
+    document.body.addEventListener('mousedown', () => {
+      isMouseDown = true
+    });
+    document.body.addEventListener('mouseleave', () => {
+      isMouseDown = false
+    });
+    document.body.addEventListener('mousemove', (evt) => {
+      if (isMouseDown) {
+        console.log(isMouseDown);
+        const {clientX, clientY} = evt;
+        const isHeightChanged = height < clientY,
+          isWidthChanged = width < clientX;
+        if (isHeightChanged || isWidthChanged) {
+          isHeightChanged && (height = clientY);
+          isWidthChanged && (width = clientX);
+          divElement.setAttribute('style', `width: ${width}px; height: ${height}px`);
+        }
+      }
+    });
   }
 });
+

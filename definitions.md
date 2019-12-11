@@ -1,0 +1,1 @@
+ - Pull the definitions from MDN for `Closure`, `Prototypal inheritance` and `context (this)`
