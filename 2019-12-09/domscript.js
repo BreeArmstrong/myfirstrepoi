@@ -53,6 +53,7 @@ document.addEventListener('readystatechange', () => {
       console.log(event);
       const {x, y} = event;
       circle.setAttribute('style', `left: ${x - clientWidth / 2}px; top: ${y - clientHeight / 2}px;`);
+  
       console.log(`The mouse is at ... `, x, y);
     });
   }

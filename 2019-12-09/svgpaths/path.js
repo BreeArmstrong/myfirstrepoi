@@ -16,8 +16,8 @@ class Path {
 
   getDAttribute() {
     const {points} = this;
-    console.log(points.slice(1));
-    console.log(points);
+    // console.log(points.slice(1));
+    // console.log(points);
     if (points.length > 1) {
       const pointsForLine = points.slice(1);
       const lines = pointsForLine.map((val, index) => {

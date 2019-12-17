@@ -39,7 +39,6 @@ document.addEventListener('readystatechange', () => {
       //If path of d="" is empty, use M at the beginning of the string
       console.log(e.x, e.y);
       createNewPAth(e.x, e.y);
-      
     });
     document.body.addEventListener('mousedown', (e) => {
       // console.log(e)

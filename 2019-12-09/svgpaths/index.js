@@ -70,16 +70,18 @@ function printPath() {
   const path = new Path();
   // add a listener for the mousedown
   document.body.firstElementChild.addEventListener('mousedown', e => {
+    console.log(e)
     const {clientX, clientY} = e;
     path.addPoint(clientX, clientY);
-    console.log(path.getPathElement(), path.toString());
+    // console.log(path.getPathElement(), path.toString());
     svg.innerHTML = path.toString();
   });
 
   document.body.firstElementChild.addEventListener('mousemove', e => {
     const {clientX, clientY} = e;
+    console.log(e);
     path.addPhantomPoint(clientX, clientY);
-    console.log(path.getPathElement(), path.toString());
+    // console.log(path.getPathElement(), path.toString());
     svg.innerHTML = path.toString();
   });
 }

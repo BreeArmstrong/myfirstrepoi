@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Create User</title>
+  <link rel="stylesheet" href="CreateUser.css">
+  <script type="application/javascript" src="CreateUser.js"></script>
+</head>
+<body>
+<header>
+  Users Exercise
+</header>
+<main>
+  <section class="instructions">
+    <div>Specs:</div>
+    <ul>
+      <li>Add the user data from the inputs to the table below once the user clicks on the button <strong>"Create User"</strong></li>
+      <li>The user should be displayed in the <strong>List of Users</strong> section below.</li>
+      <li>Upon clicking the header for the list, e.g. <strong>First Name (asc)</strong>,
+        it should toggle the order of items based on that property and lead to
+        <strong>First Name (desc)</strong>. Clicking it again will order the items in
+        ascending order based on the <strong>first name</strong> of the users and change the header to <strong>First Name (asc)</strong>
+      </li>
+      <li>
+        Write out your code using raw Javascript and DOM scripting.
+      </li>
+      <li>
+        The code will be evaluated on the following parameters
+        <ul>
+          <li>Does the code operate according to the specs?</li>
+          <li>Is it readable and well-commented (e.g. <a href="https://devhints.io/jsdoc">jsdocs</a>)</li>
+          <li>Is it well-organized?</li>
+          <li>Does it apply any well known design patterns?</li>
+          <li>Is it performant?</li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+  <section class="create-user">
+    <header>
+      <h3>Create a User</h3>
+    </header>
+    <div>
+      <input type="text" value="Brianna" class="first-name">
+      <input type="text" value="Grizzell" class="last-name">
+      <input type="date" value="1994-11-04" class="date-of-birth">
+      <button>Create User</button>
+    </div>
+  </section>
+  <section class="list-users">
+    <header>
+      <h3>List of Users</h3>
+    </header>
+    <table>
+      <thead>
+      <tr>
+        <th data-prop="firstName">First Name (asc)</th>
+        <th data-prop="lastName">Last Name (asc)</th>
+        <th data-prop="dateOfBirth">Date of Birth (asc)</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Bree</td>
+        <td>Grizzell</td>
+        <td>2017-03-07</td>
+      </tr>
+      </tbody>
+    </table>
+  </section>
+</main>
+</body>
+</html>
