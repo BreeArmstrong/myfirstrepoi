@@ -29,9 +29,9 @@ const modelTarget = {
   },
   users: {
     'Brianna': {
-      firstName: 'Brianna',
+      firstName: 'Bree',
       lastName: 'Grizzell',
-      dateOfBirth: '1994-11-04'
+      dateOfBirth: '2019-11-04'
     },
     'Damien': {
       firstName: 'Damien',
@@ -67,10 +67,10 @@ function renderUsers() {
     });
     tbody.appendChild(tr);
   });
-};
+}
 
 //Create User - Controller
-const createUserControllerInit = () =>{
+const createUserControllerInit = () => {
   const button = document.querySelector(model.createButton.selector);
   const props = Object.keys(model.props);
   const inputElements = props.map(
@@ -99,7 +99,7 @@ const compareFn = (prop, a, b) => {
     return -1;
   } else if (a[prop] > b[prop]){
     return 1;
-  }else return 0;
+  } else return 0;
 };
 
 //Click Handler for the Table Headers
@@ -110,7 +110,7 @@ const thClickHandler = function (e) {
   model.users = users.reduce((usersObj, user) => {
     usersObj[user.firstName] = user;
     return usersObj;
-  });
+  }, {});
 };
 
 //Sort Controller
